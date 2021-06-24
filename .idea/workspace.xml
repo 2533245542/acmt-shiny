@@ -23,6 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="template.copyright.formatting" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -38,7 +39,7 @@
       <workItem from="1623264928239" duration="3687000" />
       <workItem from="1623302071114" duration="1919000" />
       <workItem from="1623918912365" duration="4545000" />
-      <workItem from="1624484994839" duration="28000" />
+      <workItem from="1624484994839" duration="11196000" />
     </task>
     <servers />
   </component>
@@ -58,9 +59,10 @@
       <screen x="0" y="23" width="1920" height="1009" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1623302373459" />
-    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup" timestamp="1623269065972">
-      <screen x="0" y="23" width="1920" height="1009" />
+    <state x="547" y="239" width="670" height="656" key="search.everywhere.popup" timestamp="1624499502031">
+      <screen x="0" y="23" width="1680" height="979" />
     </state>
-    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1623269065972" />
+    <state x="547" y="239" width="670" height="656" key="search.everywhere.popup/0.23.1680.979@0.23.1680.979" timestamp="1624499502031" />
+    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1624496276561" />
   </component>
 </project>
