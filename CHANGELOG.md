@@ -5,4 +5,11 @@ v0.0.1
 v0.0.2
 ===== 
 * completed UI 
-* implmented server for geocoder and buffer plotting
+* implmented server for geocoding, buffer drawer, and area interpolation.
+
+v0.0.3
+===== 
+* add more documentations
+* implement point gathering
+
+

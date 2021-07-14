@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e1f9f4f-18ef-41e6-ac58-47b75f311652" name="Default Changelist" comment="" />
+    <list default="true" id="7e1f9f4f-18ef-41e6-ac58-47b75f311652" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.R" beforeDir="false" afterPath="$PROJECT_DIR$/global.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.R" beforeDir="false" afterPath="$PROJECT_DIR$/server.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui.R" beforeDir="false" afterPath="$PROJECT_DIR$/ui.R" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +20,9 @@
         <option value="R Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tTMeWJHhHo5KawZ6GPJYxRUBBX" />
   <component name="ProjectViewState">
@@ -39,7 +49,8 @@
       <workItem from="1623264928239" duration="3687000" />
       <workItem from="1623302071114" duration="1919000" />
       <workItem from="1623918912365" duration="4545000" />
-      <workItem from="1624484994839" duration="11196000" />
+      <workItem from="1624484994839" duration="17609000" />
+      <workItem from="1625166395347" duration="397000" />
     </task>
     <servers />
   </component>
@@ -59,10 +70,10 @@
       <screen x="0" y="23" width="1920" height="1009" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1623302373459" />
-    <state x="547" y="239" width="670" height="656" key="search.everywhere.popup" timestamp="1624499502031">
-      <screen x="0" y="23" width="1680" height="979" />
+    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup" timestamp="1624518428191">
+      <screen x="0" y="23" width="1920" height="1009" />
     </state>
     <state x="547" y="239" width="670" height="656" key="search.everywhere.popup/0.23.1680.979@0.23.1680.979" timestamp="1624499502031" />
-    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1624496276561" />
+    <state x="625" y="246" width="670" height="676" key="search.everywhere.popup/0.23.1920.1009@0.23.1920.1009" timestamp="1624518428191" />
   </component>
 </project>
