@@ -1,6 +1,6 @@
 server <- function(input, output) {
       #' Geocoder
-  latitude_and_longitude_list <- eventReactive(eventExpr = input$acmt_geocoder_do_convertion, ignoreNULL = FALSE, {
+  latitude_and_longitude_list <- eventReactive(eventExpr = input$acmt_geocoder_do_convertion, {
     get_latitude_and_longitude_from_address_with_osm(input_address = input$acmt_geocoder_address)
   })
   output$acmt_geocoder_latitude <- renderText({
@@ -11,8 +11,8 @@ server <- function(input, output) {
   })
 
       #' Plot area of interest
-  buffer_plotting_input_data <- reactiveValues(plot_circular = FALSE, plot_travalable = FALSE)
-  observeEvent(eventExpr = input$acmt_buffer_circular_do_plot, ignoreNULL = FALSE, {
+  buffer_plotting_input_data <- reactiveValues(plot_circular = NULL, plot_travelable = NULL)
+  observeEvent(eventExpr = input$acmt_buffer_circular_do_plot, {
     buffer_plotting_input_data$plot_circular <- TRUE
     buffer_plotting_input_data$plot_travelable <- FALSE
 
@@ -30,12 +30,17 @@ server <- function(input, output) {
     buffer_plotting_input_data$acmt_buffer_travelable_transportation_duration <- as.numeric(input$acmt_buffer_travelable_transportation_duration)
   })
   output$acmt_buffer_plot <- renderLeaflet({
+    if (is.null(buffer_plotting_input_data$plot_circular) && is.null(buffer_plotting_input_data$plot_travelable)) {
+      return()  # when the app first starts, do nothing until the plot button is clicked.
+    }
+
     area_buffer <- NULL
     plot_circular <- buffer_plotting_input_data$plot_circular
     plot_travelable <- buffer_plotting_input_data$plot_travelable
 
     latitude <- buffer_plotting_input_data$latitude
     longitude <- buffer_plotting_input_data$longitude
+
     if (plot_circular) {
       area_buffer <- get_point_buffer_for_lat_long(long = longitude, lat = latitude, radius_meters = buffer_plotting_input_data$acmt_buffer_circular_radius)
     } else if (plot_travelable) {

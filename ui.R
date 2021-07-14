@@ -37,7 +37,7 @@ ui <- navbarPage(
            ),
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
-             h4("Showing the area of intereset on map"),
+             h4("Showing the area of interest on map"),
              leafletOutput(outputId = "acmt_buffer_plot")
            )
   ),

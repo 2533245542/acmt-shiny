@@ -19,6 +19,8 @@ First run `acmt-network` with `docker-compose` in one terminal.
 
 Then open another terminal, use `docker exec -it acmt-network_app_1 /bin/bash` to enter the `network_app_1` container.
 
+In `srv/shiny-server/acmt_shiny/global.R`, set `acmt_network_path` to the correct one.
+
 Run `shiny-server` in the terminal.
 
 Try these websites:
