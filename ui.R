@@ -76,9 +76,11 @@ ui <- navbarPage(
 
   #' Documentation
   tabPanel(title = "Documentation",
-           h4("Documentation: https://docs.google.com/document/d/18Sii8PldC54C8CERQISAp-jB3ucqhi_GnxlJ7jyaP9U/edit#"),
-           h4("In the local version of ACMT, getting travelable buffer sends requests to OpenStreenMap and is thus not private."),
-           h4("Other functinos of the local ACMT are able to preserve privacy.")
+           #h4("Documentation: https://docs.google.com/document/d/18Sii8PldC54C8CERQISAp-jB3ucqhi_GnxlJ7jyaP9U/edit#"),
+           #h4("In the local version of ACMT, getting travelable buffer sends requests to OpenStreenMap and is thus not private."),
+           #h4("Other functinos of the local ACMT are able to preserve privacy."),
+           includeMarkdown("documentation.md")
+
   )
   #tabPanel("Navbar 3", "This panel is intentionally left blank")
 )

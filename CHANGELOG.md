@@ -9,7 +9,17 @@ v0.0.2
 
 v0.0.3
 ===== 
-* add more documentations
 * implement point gathering
+
+v0.0.4
+===== 
+* add documentation
+
+future
+========================= 
+* add constraints to prevent long run time
+* let the shiny also shows the code for reproducing the results
+
+
 
 
