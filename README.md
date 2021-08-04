@@ -26,6 +26,8 @@ Open a terminal and run `shiny-server`
 #RUN git clone https://github.com/2533245542/acmt-shiny.git /srv/shiny-server/acmt_shiny
 ```
 
+2.1 Edit `.env` to remove the comments.
+
 3. Run `acmt-network` with `docker-compose up --build` in one terminal.
 
 4. After the previous command runs to complete, open another terminal, run `docker exec -it acmt-network_app_1 /bin/bash` to enter the `network_app_1` container.

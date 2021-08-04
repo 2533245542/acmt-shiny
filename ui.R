@@ -25,12 +25,14 @@ ui <- navbarPage(
              textInput(inputId = "acmt_buffer_longitude", label = "Longitude", value = "-122.3107948"),
              tabsetPanel(type = "pills",
                          tabPanel(title = "Circular area",
-                                  textInput(inputId = "acmt_buffer_circular_radius", label = "Radius (meters)", value = "200"),
+                                  #textInput(inputId = "acmt_buffer_circular_radius", label = "Radius (meters)", value = "200"),
+                                  sliderInput(inputId = "acmt_buffer_circular_radius", label = "Radius (meters)", min = 1, max = 500, value = 200),
                                   actionButton(inputId = "acmt_buffer_circular_do_plot", label = "Plot")
                          ),
                          tabPanel("Travelable area",
                                   selectInput(inputId = "acmt_buffer_travelable_transportation_type", label = "Transportation type", choices = c("foot", "bike", "car")),
-                                  textInput(inputId = "acmt_buffer_travelable_transportation_duration", label = "Duration (minutes)", value = "10"),
+                                  #textInput(inputId = "acmt_buffer_travelable_transportation_duration", label = "Duration (minutes)", value = "10"),
+                                  sliderInput(inputId = "acmt_buffer_travelable_transportation_duration", label = "Duration (minutes)", min = 1, max = 20, value = 10),
                                   actionButton(inputId = "acmt_buffer_travelable_do_plot", label = "Plot")
                          )
              )
@@ -47,7 +49,8 @@ ui <- navbarPage(
            sidebarPanel(
              textInput(inputId = "acmt_interpolation_latitude", label = "Latitude", value = "47.6578551"),
              textInput(inputId = "acmt_interpolation_longitude", label = "Longitude", value = "-122.3107948"),
-             textInput(inputId = "acmt_interpolation_radius", label = "Radius (meters)", value = "200"),
+             #textInput(inputId = "acmt_interpolation_radius", label = "Radius (meters)", value = "200"),
+             sliderInput(inputId = "acmt_interpolation_radius", label = "Radius (meters)", min = 1, max = 500, value = 200),
              selectInput(inputId = "acmt_interpolation_dataset", label = "Datset", choices = c("American Community Survey(ACS)", "walkability", "NO2", "O3", "PM2.5")),
              actionButton(inputId = "acmt_interpolation_do_interpolation", label = "Get area-interpolated measures")
            ),
@@ -63,7 +66,8 @@ ui <- navbarPage(
            sidebarPanel(
              textInput(inputId = "acmt_aggregation_latitude", label = "Latitude", value = "47.6578551"),
              textInput(inputId = "acmt_aggregation_longitude", label = "Longitude", value = "-122.3107948"),
-             textInput(inputId = "acmt_aggregation_radius", label = "Radius (meters)", value = "200"),
+             #textInput(inputId = "acmt_aggregation_radius", label = "Radius (meters)", value = "200"),
+             sliderInput(inputId = "acmt_aggregation_radius", label = "Radius (meters)", min = 1, max = 500, value = 200),
              selectInput(inputId = "acmt_aggregation_dataset", label = "Datset", choices = c("911 calls", "Seattle crime", "Boston crime", "Chicago crime", "Los Angeles crime", "Airbnb")),
              actionButton(inputId = "acmt_aggregation_do_aggregation", label = "Get aggregated measures")
            ),
