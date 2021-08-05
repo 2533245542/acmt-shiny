@@ -63,7 +63,7 @@ server <- function(input, output) {
     area_interpolation_input_data$acmt_interpolation_dataset <- input$acmt_interpolation_dataset
   })
 
-  output$acmt_interpolation_table <- renderDataTable({
+  output$acmt_interpolation_table <- renderTable({
     if (is.null(area_interpolation_input_data$acmt_interpolation_do_interpolation)) {
       return()
     }
@@ -99,7 +99,7 @@ server <- function(input, output) {
     incidence_aggregation_input_data$acmt_aggregation_dataset <- input$acmt_aggregation_dataset
   })
 
-  output$acmt_aggregation_table <- renderDataTable({
+  output$acmt_aggregation_table <- renderTable({
     if (is.null(incidence_aggregation_input_data$acmt_aggregation_do_aggregation)) {
       return()
     }

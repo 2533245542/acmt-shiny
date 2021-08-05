@@ -15,7 +15,7 @@ Put this folder into `/srv/shiny-server`.
 Open a terminal and run `shiny-server`
 
 # Start the app for acmt-network
-1. Download `acmt-network`.
+1. Download `acmt-network` with `git clone https://github.com/2533245542/acmt-network.git`.
 
 2. Open `acmt-network/src/app/Dockerfile`. Uncomment the following lines of code.
 ```
@@ -61,6 +61,8 @@ Note that both terminals have to be remained open for serving the app.
 `acmt.csde.washington.edu:8080`
 `acmt.csde.washington.edu:8080/sample-apps/hello/`
 
+# Other
+see log `cd /var/log/shiny-server`
 
 # other commands
 systemctl stop shiny-server

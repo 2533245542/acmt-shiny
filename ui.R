@@ -51,13 +51,13 @@ ui <- navbarPage(
              textInput(inputId = "acmt_interpolation_longitude", label = "Longitude", value = "-122.3107948"),
              #textInput(inputId = "acmt_interpolation_radius", label = "Radius (meters)", value = "200"),
              sliderInput(inputId = "acmt_interpolation_radius", label = "Radius (meters)", min = 1, max = 500, value = 200),
-             selectInput(inputId = "acmt_interpolation_dataset", label = "Datset", choices = c("American Community Survey(ACS)", "walkability", "NO2", "O3", "PM2.5")),
+             selectInput(inputId = "acmt_interpolation_dataset", label = "Dataset", choices = c("American Community Survey(ACS)", "walkability", "NO2", "O3", "PM2.5")),
              actionButton(inputId = "acmt_interpolation_do_interpolation", label = "Get area-interpolated measures")
            ),
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
              h4("Showing the interpolated measures in a table"),
-             dataTableOutput(outputId = "acmt_interpolation_table")
+             tableOutput(outputId = "acmt_interpolation_table")
            )
   ),
 
@@ -68,13 +68,13 @@ ui <- navbarPage(
              textInput(inputId = "acmt_aggregation_longitude", label = "Longitude", value = "-122.3107948"),
              #textInput(inputId = "acmt_aggregation_radius", label = "Radius (meters)", value = "200"),
              sliderInput(inputId = "acmt_aggregation_radius", label = "Radius (meters)", min = 1, max = 500, value = 200),
-             selectInput(inputId = "acmt_aggregation_dataset", label = "Datset", choices = c("911 calls", "Seattle crime", "Boston crime", "Chicago crime", "Los Angeles crime", "Airbnb")),
+             selectInput(inputId = "acmt_aggregation_dataset", label = "Dataset", choices = c("911 calls", "Seattle crime", "Boston crime", "Chicago crime", "Los Angeles crime", "Airbnb")),
              actionButton(inputId = "acmt_aggregation_do_aggregation", label = "Get aggregated measures")
            ),
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
              h4("Showing the aggregated incidence in a table"),
-             dataTableOutput(outputId = "acmt_aggregation_table")
+             tableOutput(outputId = "acmt_aggregation_table")
            )
   ),
 
