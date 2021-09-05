@@ -27,7 +27,6 @@ v0.0.6
 * in documenation added a link for the introduction to ACMT
 * let the shiny also show the code for reproducing the results
 
-
 future
 ========================= 
 * PASS add constraints to prevent long run time
