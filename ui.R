@@ -14,7 +14,9 @@ ui <- navbarPage(
              h4("Latitude"),
              verbatimTextOutput(outputId = "acmt_geocoder_latitude"),
              h4("Longitude"),
-             verbatimTextOutput(outputId = "acmt_geocoder_longitude")
+             verbatimTextOutput(outputId = "acmt_geocoder_longitude"),
+             h4("ACMT code to reproduce"),
+             verbatimTextOutput(outputId = "acmt_geocoder_code"),
            ),
   ),
 
@@ -40,7 +42,9 @@ ui <- navbarPage(
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
              h4("Showing the area of interest on map"),
-             leafletOutput(outputId = "acmt_buffer_plot")
+             leafletOutput(outputId = "acmt_buffer_plot"),
+             h4("ACMT code to reproduce"),
+             verbatimTextOutput(outputId = "acmt_buffer_code"),
            )
   ),
 
@@ -57,7 +61,9 @@ ui <- navbarPage(
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
              h4("Showing the interpolated measures in a table"),
-             tableOutput(outputId = "acmt_interpolation_table")
+             tableOutput(outputId = "acmt_interpolation_table"),
+             h4("ACMT code to reproduce"),
+             verbatimTextOutput(outputId = "acmt_interpolation_code"),
            )
   ),
 
@@ -74,7 +80,9 @@ ui <- navbarPage(
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
              h4("Showing the aggregated incidence in a table"),
-             tableOutput(outputId = "acmt_aggregation_table")
+             tableOutput(outputId = "acmt_aggregation_table"),
+             h4("ACMT code to reproduce"),
+             verbatimTextOutput(outputId = "acmt_aggregation_code"),
            )
   ),
 
