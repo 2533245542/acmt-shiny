@@ -7,7 +7,9 @@ ui <- navbarPage(
   tabPanel(title = "Geocoder",
            sidebarPanel(
              textInput(inputId = "acmt_geocoder_address", label = "Address", value = "4063 Spokane Ln, Seattle, WA 98105"),
-             actionButton(inputId = "acmt_geocoder_do_convertion", label = "Convert")
+             actionButton(inputId = "acmt_geocoder_do_convertion", label = "Convert"),
+             h5(),
+             textOutput(outputId = "acmt_user_simutaneous"),
            ),
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
@@ -88,11 +90,7 @@ ui <- navbarPage(
 
   #' Documentation
   tabPanel(title = "Documentation",
-           #h4("Documentation: https://docs.google.com/document/d/18Sii8PldC54C8CERQISAp-jB3ucqhi_GnxlJ7jyaP9U/edit#"),
-           #h4("In the local version of ACMT, getting travelable buffer sends requests to OpenStreenMap and is thus not private."),
-           #h4("Other functinos of the local ACMT are able to preserve privacy."),
-           includeMarkdown("documentation.md")
-
+           includeMarkdown("documentation.md"),
   )
   #tabPanel("Navbar 3", "This panel is intentionally left blank")
 )

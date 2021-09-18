@@ -1,6 +1,21 @@
+users <- reactiveValues(number_of_user_simutaneous = 0)
+
 server <- function(input, output) {
   if (!interactive()) sink(stderr(), type = "output")  # print standard output to the log file; otherwise log file only shows stderr
-      #' Geocoder
+      #' Count online users
+  onSessionStart <- isolate({
+    users$number_of_user_simutaneous <- users$number_of_user_simutaneous + 1
+  })
+  onSessionEnded(function() {
+    isolate({
+      users$number_of_user_simutaneous <- users$number_of_user_simutaneous - 1
+    })
+  })
+  output$acmt_user_simutaneous <- renderText({
+    return(paste("Number of online users: ", users$number_of_user_simutaneous))
+  })
+
+        #' Geocoder
   geocoder_input_data <- reactiveValues(acmt_geocoder_do_convertion = NULL)
   observeEvent(eventExpr = input$acmt_geocoder_do_convertion, {
     geocoder_input_data$acmt_geocoder_do_convertion <- input$acmt_geocoder_do_convertion
@@ -23,7 +38,7 @@ server <- function(input, output) {
     return(paste("geocode(", "\"", geocoder_input_data$acmt_geocoder_address, "\"", ")", sep = ""))
   })
 
-          #' Plot area of interest
+            #' Plot area of interest
   buffer_plotting_input_data <- reactiveValues(plot_circular = NULL, plot_travelable = NULL)
   observeEvent(eventExpr = input$acmt_buffer_circular_do_plot, {
     buffer_plotting_input_data$plot_circular <- TRUE

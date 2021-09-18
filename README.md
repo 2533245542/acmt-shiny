@@ -27,7 +27,7 @@ Open a terminal and run `shiny-server`
 ```
 
 2.1 Edit `.env` to remove the comments.
-2.2 `vim docker-compose.yml` to comment out the mapping to the rstudio prot `- "8787:8787"` such that the rstudio cannot be accessed publically.
+2.2 `vim docker-compose.yml` to comment out the mapping to the rstudio port `- "8787:8787"` such that the rstudio cannot be accessed publically.
 
 3. Run `acmt-network` with `docker-compose up --build` in one terminal.
 

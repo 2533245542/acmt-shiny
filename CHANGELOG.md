@@ -27,6 +27,11 @@ v0.0.6
 * in documenation added a link for the introduction to ACMT
 * let the shiny also show the code for reproducing the results
 
+v0.0.7
+===== 
+* display the number of people using the app simultaneously
+
+
 future
 ========================= 
 * PASS add constraints to prevent long run time
