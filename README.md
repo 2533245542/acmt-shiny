@@ -1,19 +1,3 @@
-# Start the app for testing
-In `global.R`, set `acmt_network_path <- "../local_acmt_network_development/local_acmt_network_v0.0.10/"` to the path to the location of the ACMT source files.
-
-In `acmt-shiny`, do
-
-```
-library(shiny)
-runApp()
-```
-
-
-# Start the app for server
-Put this folder into `/srv/shiny-server`.
-
-Open a terminal and run `shiny-server`
-
 # Start the app for acmt-network
 1. Download `acmt-network` with `git clone https://github.com/2533245542/acmt-network.git`.
 
@@ -53,6 +37,23 @@ to
 `acmt.csde.washington.edu:8000/sample-apps/hello/`
 
 Note that both terminals have to be remained open for serving the app.
+
+# Start the app for testing
+In `global.R`, set `acmt_network_path <- "../local_acmt_network_development/local_acmt_network_v0.0.10/"` to the path to the location of the ACMT source files.
+
+In `acmt-shiny`, do
+
+```
+library(shiny)
+runApp()
+```
+
+# Start the app for server (incomplete)
+Put this folder into `/srv/shiny-server`.
+
+Open a terminal and run `shiny-server`
+
+
 
 # Test shiny-server on acmt.csde.washington.edu
 1. install shiny-server
