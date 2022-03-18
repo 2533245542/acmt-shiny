@@ -31,6 +31,9 @@ v0.0.7
 ===== 
 * display the number of people using the app simultaneously
 
+v0.0.8
+===== 
+* did something on the acmt-network side to automate the launching of shiny app
 
 future
 ========================= 

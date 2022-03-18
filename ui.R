@@ -9,7 +9,7 @@ ui <- navbarPage(
              textInput(inputId = "acmt_geocoder_address", label = "Address", value = "4063 Spokane Ln, Seattle, WA 98105"),
              actionButton(inputId = "acmt_geocoder_do_convertion", label = "Convert"),
              h5(),
-             textOutput(outputId = "acmt_user_simutaneous"),
+             textOutput(outputId = "acmt_user_simutaneous"),  # know bug: keep refreshing the page will increase the number of users, just wait for a momment and it will be back to the normal state
            ),
            mainPanel(
              conditionalPanel(condition="$('html').hasClass('shiny-busy')", tags$div("Loading...",id="loadmessage")),
